@@ -4,10 +4,11 @@
   "description": "amiibo site for demoing express",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js -e js,hbs",
+    "start": "node public/index.js",
+    "dev": "nodemon public/index.js -e js,hbs",
     "build": "webpack --config webpack.config.js",
-    "heroku-prebuild": "npm install --dev"
+    "heroku-prebuild": "npm install --dev",
+    "serve": "nodemon server.js"
   },
   "repository": {
     "type": "git",
