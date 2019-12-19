@@ -7,8 +7,7 @@
     "start": "node public/index.js",
     "dev": "nodemon public/index.js -e js,hbs",
     "build": "webpack --config webpack.config.js",
-    "heroku-prebuild": "npm install --dev",
-    "serve": "nodemon server.js"
+    "heroku-prebuild": "npm install --dev"
   },
   "repository": {
     "type": "git",
