@@ -11,6 +11,7 @@ const viewsPath = path.join(__dirname, "../templates/views");
 app.set("view engine", "hbs");
 app.set("views", viewsPath); //telling express to get templates from templates/views folder
 hbs.registerPartials(partialsPath);
+//set up our static asset directory (gimme dat CSS)
 app.use(express.static(publicDirectoryPath));
 app.get("", async (req, res) => {
   try {
@@ -38,16 +39,6 @@ app.get("/anything", async (req, res) => {
     res.status(500).send();
   }
 });
-/* app.get("/about/:id", async (req, res) => {
-  const test = req.params.id;
-  try {
-    res.render("index", {
-      title: `${test}`
-    });
-  } catch {
-    res.status(500).send();
-  }
-}); */
 
 app.listen(3000, () => {
   console.log("Listening on port 3000");
